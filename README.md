@@ -1,4 +1,7 @@
-# Merror
+![Merror](https://github.com/mamsoudi/merror/raw/master/resources/logo-150.png "Merror")
+[![Build Status](https://travis-ci.org/mamsoudi/merror.svg?branch=master)](https://travis-ci.org/mamsoudi/merror)
+
+# Merror 
 
 Developing REST APIs with Express, I was always looking for a clean way to send HTTP error responses along with the data I wanted, not only to allow clients to know which error has happened but to provide the information I wanted.
 
@@ -7,7 +10,6 @@ Express allows you to handle errors but doesn't return Error objects yet renders
 Here's Merror (/ˈmɪrə/). A simple wrapper around JavaScript Error objects with a middleware for Expressjs. Merror allows you to define a new HttpError object when you need in your controller. The object then will be passed to the middleware to be processed and sent to the client.
 
 ## Usage
---------
 
 Using Merror is easy and straight-forward. Register `MerrorMiddleware` in your Expressjs application as a middleware **after registering router module** and start constructing Merror Objects whenever you hit an error in your controllers. Let's see an example:
 
@@ -44,16 +46,14 @@ If we make a request to `http://localhost:3000/profile` we will see this in the 
 
 ```JSON
 {
-  {
-      "success": false,
-      "statusCode": 401,
-      "error": "Unauthorized",
-      "message": "Unauthorized Access!",
-      "properties": {
-        "code": 1001,
-        "status": "REFRESH_TOKEN"
-      }
-    }
+  "success": false,
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "Unauthorized Access!",
+  "properties": {
+    "code": 1001,
+    "status": "REFRESH_TOKEN"
+  }
 }
 ```
 
@@ -62,7 +62,6 @@ If we make a request to `http://localhost:3000/profile` we will see this in the 
 
 
 ## API
-------
 
 ### `new Merror(statusCode, message, [properties])`
 
@@ -122,9 +121,9 @@ app.use(MerrorMiddleware());
 ```
 
 ## License
-----------
+
 This project is licensed under MIT. Feel free to fork, change and use it however you like.
 
 ## Contribution
----------------
+
 If you feel there's something that could be better in this module make sure to fork, make changes and make a new PR with full description of what you've changed. I'll make sure to review it.
