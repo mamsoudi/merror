@@ -1,5 +1,6 @@
 ![Merror](https://github.com/mamsoudi/merror/raw/master/resources/logo-150.png "Merror")
-[![Build Status](https://travis-ci.org/mamsoudi/merror.svg?branch=master)](https://travis-ci.org/mamsoudi/merror)
+
+[![Build Status](https://travis-ci.org/mamsoudi/merror.svg?branch=master)](https://travis-ci.org/mamsoudi/merror) [![bitHound Dependencies](https://www.bithound.io/github/mamsoudi/merror/badges/dependencies.svg)](https://www.bithound.io/github/mamsoudi/merror/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/mamsoudi/merror/badges/devDependencies.svg)](https://www.bithound.io/github/mamsoudi/merror/master/dependencies/npm) [![bitHound Code](https://www.bithound.io/github/mamsoudi/merror/badges/code.svg)](https://www.bithound.io/github/mamsoudi/merror) [![bitHound Overall Score](https://www.bithound.io/github/mamsoudi/merror/badges/score.svg)](https://www.bithound.io/github/mamsoudi/merror)
 
 # Merror 
 
