@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A REST-friendly HTTP error handler middleware for Express.js",
   "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mamsoudi/merror.git"
@@ -14,7 +15,7 @@
     "expressjs",
     "error-handling"
   ],
-  "author": "Masoud Mirzaei",
+  "author": "Masoud Mirzaei <mamos98@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mamsoudi/merror/issues"
