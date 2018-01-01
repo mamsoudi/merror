@@ -11,7 +11,23 @@ Here's Merror (/ˈmɪrə/). A simple wrapper around JavaScript Error objects wit
 
 ## Usage
 
-Using Merror is easy and straight-forward. Register `MerrorMiddleware` in your Expressjs application as a middleware **after registering router module** and start constructing Merror Objects whenever you hit an error in your controllers. Let's see an example:
+Using Merror is easy and straight-forward. Install `express-merror` using NPM or Yarn and import `Merror` and `MerrorMiddlware` in your application.
+
+```bash
+$ npm install --save express-merror
+```
+
+```js
+// If using TypeScript and ES6:
+import { Merror, MerrorMiddleware } from 'express-merror';
+
+// If using JS/RequireJS
+const MerrorModule = require('express-merror');
+const Merror = MerrorModule.Merror;
+const MerrorMiddleware = MerrorModule.MerrorMiddleware;
+```
+
+Register `MerrorMiddleware` in your Expressjs application as a middleware **after registering router module** and start constructing Merror Objects whenever you hit an error in your controllers. Let's see an example:
 
 ```js
 const express = require("express");
@@ -58,7 +74,7 @@ If we make a request to `http://localhost:3000/profile` we will see this in the 
 ```
 
 > _**NOTE:**_
-> Please pay attention that you should register the middleware after registering routes and also wrap constructed error with next() function and return it in order for Merror to properly work.
+> Please pay attention that you should register the middleware after registering routes and also wrap constructed error with next() function and return it in order for Merror to work properly.
 
 
 ## API
@@ -83,10 +99,10 @@ app.post("/login", function(req, res) {
   const errors = req.validationErrors(true);
 
   if (errors) {
-    return next(new HttpError(403, "Authentication Failed. Invalid Email or Password.", errors));
+    return next(new Merror(403, "Authentication Failed. Invalid Email or Password.", errors));
   }
 
-  // Rest of our code to find user etc.
+  // Rest of our code to find user, etc.
 });
 ```
 
