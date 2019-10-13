@@ -1,4 +1,4 @@
-import { ErrorNumber } from "./types";
+import { ErrorNumber } from "../types";
 
 /**
  * Merror Constructor extending JS Error object

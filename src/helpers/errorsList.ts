@@ -1,4 +1,4 @@
-import { HttpErrorItem } from "./types";
+import { HttpErrorItem } from "./../types";
 
 const HttpErrorsList: Array<HttpErrorItem> = [
   {
