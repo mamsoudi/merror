@@ -8,6 +8,15 @@ const router = express.Router();
 app.use("/", router);
 
 // Router
+router.get("/", function(req: express.Request, res: express.Response, next: express.NextFunction) {
+  // Pay attention that we should wrap our error object
+  // with next() in order to make it travel to our middleware
+  // which is registered after router module
+    return res.json({
+      success: true,
+      message: "Please change './example/server.ts' to see the changes. Head to '/profile' if you want to see Merror in action"
+    });
+});
 router.get("/profile", function(req: express.Request, res: express.Response, next: express.NextFunction) {
   // Pay attention that we should wrap our error object
   // with next() in order to make it travel to our middleware
