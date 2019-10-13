@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { default as HttpErrorsList } from "./errorsList";
-import { default as Merror } from "./merrorConstructor";
+import { default as HttpErrorsList } from "./helpers/errorsList";
+import { default as Merror } from "./handler/merrorConstructor";
 import { HttpErrorItem } from "./types";
 
 /**
@@ -44,6 +44,6 @@ export function MerrorMiddleware() {
 }
 
 
-export { default as HttpErrorsList } from "./errorsList";
-export { default as Merror } from "./merrorConstructor";
+export { default as HttpErrorsList } from "./helpers/errorsList";
+export { default as Merror } from "./handler/merrorConstructor";
 export { HttpErrorItem, ErrorNumber } from "./types";
